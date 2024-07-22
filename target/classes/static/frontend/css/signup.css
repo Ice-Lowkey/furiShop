@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    background-image: url('/frontend/images/background/background3.jpg');
+    background-size: cover; /* Đảm bảo ảnh phủ toàn bộ khung hình */
+    background-position: center; /* Căn giữa ảnh */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 500px;
+    text-align: center;
+    color: rgb(87, 82, 82);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-header {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-header h3 {
+    margin: 0;
+    font-size: 24px;
+    color: rgb(87, 82, 82);
+}
+
+.form-m {
+    background-color: rgba(255, 255, 255, 0.7); /* Màu trắng với độ trong suốt */
+    padding: 20px;
+    color: rgb(87, 82, 82);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgba(204, 204, 204, 0.5); /* Border với độ trong suốt */
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.7); /* Màu trắng với độ trong suốt */
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(136, 198, 12, 0.7); /* Màu xanh lá với độ trong suốt */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(136, 198, 12, 0.9);
+}
+
+.forget-password {
+    text-align: center;
+}
