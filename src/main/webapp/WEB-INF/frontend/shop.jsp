@@ -101,12 +101,12 @@
         <div class="row">
             <!-- Start Column 1 -->
 
-            <c:forEach items="${products}" var="product">
+            <c:forEach items="${products}" var="user">
                 <div class="col-12 col-md-4 col-lg-3 mb-5">
-                    <a class="product-item" href="/detail/${product.id}">
-                        <img width="300px" src="/api/product-image/${product.image}" class="img-fluid product-thumbnail">
-                        <h3 class="product-title">${product.name}</h3>
-                        <strong class="product-price">$${product.price}</strong>
+                    <a class="product-item" href="/detail/${user.id}">
+                        <img width="300px" src="/api/product-image/${user.image}" class="img-fluid product-thumbnail">
+                        <h3 class="product-title">${user.name}</h3>
+                        <strong class="product-price">$${user.price}</strong>
                         <span class="icon-cross">
                 <img src="/frontend/images/home/cross.svg" class="img-fluid">
             </span>

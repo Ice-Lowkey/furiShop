@@ -30,4 +30,7 @@ public class CategoryService implements TableService{
         return categoryRepository.findAll();
     }
 
+    public CategoryEntity save(CategoryDto categoryDto){
+        return categoryRepository.save(categoryDto.mapperEntity());
+    }
 }
