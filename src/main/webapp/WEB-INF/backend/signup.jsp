@@ -55,5 +55,46 @@
     </div>
 </div>
 </body>
+
+<script>
+    document.querySelector('form').addEventListener('submit', function (event){
+        const password = document.getElementById('password')
+        const repassword = document.getElementById('repassword')
+
+        const pass = password.value
+        const repass = repassword.value
+
+        if(!(pass == repass)) {
+            alert('Mật khẩu không trùng khớp')
+            event.preventDefault()
+        }
+    })
+
+    document.querySelector('form').addEventListener('submit', function (event) {
+        const phone = document.getElementById('phone')
+        const phonecnt = phone.value;
+
+        if (!phonecnt.length <= 8) {
+            alert('Số điện thoại không hợp lệ')
+            event.preventDefault();
+        }
+    })
+
+    document.querySelector('form').addEventListener('submit', function(event) {
+        const email = document.getElementById('email');
+        const emailValue = email.value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //email phải có dạng như này
+
+        if (!emailRegex.test(emailValue)) {
+            alert('Email không hợp lệ');
+            event.preventDefault(); // Ngăn không cho form gửi đi
+        } else if (!emailValue.endsWith('@gmail.com')) { //kết thức email là @ gmail.com
+            alert('Email của bạn không hợp lệ');
+            event.preventDefault(); // Ngăn không cho form gửi đi
+        }
+    });
+
+</script>
+
 </html>
 

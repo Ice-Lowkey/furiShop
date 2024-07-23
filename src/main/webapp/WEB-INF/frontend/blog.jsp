@@ -74,7 +74,7 @@
             <div class="col-lg-5">
                 <div class="intro-excerpt">
                     <h1>Blog</h1>
-                    <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
+                    <p class="mb-4">Welcom to our store , we have high quality product , and a professional design team waiting for you.</p>
                     <a href="/shop" class="btn btn-secondary me-2">Shop Now</a>
 <%--                    <a href="/blog" class="btn btn-white-outline">Explore</a>--%>
                 </div>
@@ -395,22 +395,7 @@
 
         </div>
 
-        <div class="border-top copyright">
-            <div class="row pt-4">
-                <div class="col-lg-6">
-                    <p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a hreff="https://themewagon.com">ThemeWagon</a>  <!-- License information: https://untree.co/license/ -->
-                    </p>
-                </div>
 
-                <div class="col-lg-6 text-center text-lg-end">
-                    <ul class="list-unstyled d-inline-flex ms-auto">
-                        <li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
 
     </div>
 </footer>

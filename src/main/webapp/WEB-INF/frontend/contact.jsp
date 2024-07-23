@@ -73,7 +73,7 @@
             <div class="col-lg-5">
                 <div class="intro-excerpt">
                     <h1>Contact</h1>
-                    <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
+                    <p class="mb-4">Welcom to our store , we have high quality product , and a professional design team waiting for you.</p>
                     <a href="/shop" class="btn btn-secondary me-2">Shop Now</a>
                     <a href="/blog" class="btn btn-white-outline">Explore</a>
                 </div>

@@ -73,7 +73,7 @@
             <div class="col-lg-5">
                 <div class="intro-excerpt">
                     <h1>About Us</h1>
-                    <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
+                    <p class="mb-4">Welcom to our store , we have high quality product , and a professional design team waiting for you.</p>
                     <a href="/shop" class="btn btn-secondary me-2">Shop Now</a>
                     <a href="/blog" class="btn btn-white-outline">Explore</a>
                 </div>
@@ -96,8 +96,9 @@
         <div class="row justify-content-between align-items-center">
             <div class="col-lg-6">
                 <h2 class="section-title">Why Choose Us</h2>
-                <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
-
+                <p>Discover why so many customers trust us for their home furnishing needs.
+                    We are committed to providing exceptional quality, outstanding service,
+                    and a seamless shopping experience.</p>
                 <div class="row my-5">
                     <div class="col-6 col-md-6">
                         <div class="feature">
@@ -105,7 +106,8 @@
                                 <img src="/frontend/images/home/truck.svg" alt="Image" class="imf-fluid">
                             </div>
                             <h3>Fast &amp; Free Shipping</h3>
-                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                            <p>Enjoy fast and free shipping on all orders.
+                                We ensure your furniture arrives safely and promptly, right to your doorstep.</p>
                         </div>
                     </div>
 
@@ -115,7 +117,8 @@
                                 <img src="/frontend/images/home/bag.svg" alt="Image" class="imf-fluid">
                             </div>
                             <h3>Easy to Shop</h3>
-                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                            <p>Our user-friendly website makes it simple to find the perfect pieces for your home.
+                                Browse by category, style, or room to quickly locate what you need.</p>
                         </div>
                     </div>
 
@@ -125,7 +128,8 @@
                                 <img src="/frontend/images/home/support.svg" alt="Image" class="imf-fluid">
                             </div>
                             <h3>24/7 Support</h3>
-                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                            <p>Our dedicated support team is available 24/7 to assist you with any questions or concerns.
+                                We're here to help you every step of the way.</p>
                         </div>
                     </div>
 
@@ -135,7 +139,8 @@
                                 <img src="/frontend/images/home/return.svg" alt="Image" class="imf-fluid">
                             </div>
                             <h3>Hassle Free Returns</h3>
-                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                            <p>Shop with confidence knowing that we offer hassle-free returns.
+                                If you're not completely satisfied with your purchase, we make it easy to return or exchange items.</p>
                         </div>
                     </div>
 
