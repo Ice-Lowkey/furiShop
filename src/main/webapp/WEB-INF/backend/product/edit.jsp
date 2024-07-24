@@ -1,5 +1,7 @@
-<%@page pageEncoding="UTF-8" %><%--// đọc chữ tiếng việt--%>
+<%@ page pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="secu" uri="http://www.springframework.org/security/tags" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +40,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/backend/home">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
             </div>
@@ -50,7 +52,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="/backend/home">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -68,35 +70,35 @@
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-cog"></i>
-                <span>Components</span>
+                <span>Setting</span>
             </a>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Custom Components:</h6>
+                    <h6 class="collapse-header">Custom :</h6>
                     <a class="collapse-item" href="buttons.html">Buttons</a>
-                    <a class="collapse-item" href="cards.html">Cards</a>
+                    <a class="collapse-item" href="cards.html">Language</a>
                 </div>
             </div>
         </li>
 
         <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-               aria-expanded="true" aria-controls="collapseUtilities">
-                <i class="fas fa-fw fa-wrench"></i>
-                <span>Utilities</span>
-            </a>
-            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                 data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Custom Utilities:</h6>
-                    <a class="collapse-item" href="utilities-color.html">Colors</a>
-                    <a class="collapse-item" href="utilities-border.html">Borders</a>
-                    <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                    <a class="collapse-item" href="utilities-other.html">Other</a>
+        <secu:authorize access="hasRole('ADMIN')">
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                   aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>User</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">User manager</h6>
+                        <a class="collapse-item" href="/backend/user/create">Create</a>
+                        <a class="collapse-item" href="/backend/user/list">List</a>
+                    </div>
                 </div>
-            </div>
-        </li>
+            </li>
+        </secu:authorize>
 
         <!-- Divider -->
         <hr class="sidebar-divider">
@@ -129,17 +131,11 @@
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
-            <a class="nav-link" href="charts.html">
+            <a class="nav-link" href="/backend/chart">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Charts</span></a>
         </li>
 
-        <!-- Nav Item - Tables -->
-        <li class="nav-item active">
-            <a class="nav-link" href="tables.html">
-                <i class="fas fa-fw fa-table"></i>
-                <span>Tables</span></a>
-        </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
@@ -374,14 +370,14 @@
                             <input value="${product.id}" name="id" hidden>
                             <div class="col-md-4">
                                 <label for="validationCustom01" class="form-label">Tên sản phẩm</label>
-                                <input type="text" name="name" class="form-control" id="validationCustom01" value="${product.name}" required>
+                                <input type="text" name="name" class="form-control" id="validationCustom01" value="${value.name}" required>
                                 <div class="invalid-feedback">
                                     Vui lòng điền tên sản phẩm.
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <label for="validationCustom02" class="form-label">Nhãn hiệu</label>
-                                <input type="text" class="form-control" name="brand" id="validationCustom02" value="${product.brand}" required>
+                                <input type="text" class="form-control" name="brand" id="validationCustom02" value="${value.brand}" required>
                                 <div class="valid-feedback">
                                     Vui lòng điền tên nhãn hiệu.
                                 </div>
@@ -389,7 +385,7 @@
                             <div class="col-md-4">
                                 <label for="validationCustomUsername" class="form-label">Giá</label>
                                 <div class="input-group has-validation">
-                                    <input type="number" class="form-control" value="${product.price}" name="price" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                    <input type="number" class="form-control" value="${value.price}" name="price" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                                     <div class="invalid-feedback">
                                         Vui lòng điền giá.
                                     </div>
@@ -397,7 +393,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="validationCustom03" class="form-label">Mô tả</label>
-                                <input type="text" value="${product.description}" name="description" class="form-control" id="validationCustom03" >
+                                <input type="text" value="${value.description}" name="description" class="form-control" id="validationCustom03" >
                             </div>
                             <div class="col-md-3">
                                 <label for="validationCustom04" class="form-label">Thể loại</label>

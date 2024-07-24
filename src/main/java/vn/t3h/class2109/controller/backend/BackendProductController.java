@@ -38,6 +38,7 @@ public class BackendProductController {
 
     @RequestMapping(value = "edit/{id}")
     public String edit(Model model, ProductDto productDto, @PathVariable Long id ) {
+        model.addAttribute("value" , productService.findById(id));
         model.addAttribute("product", productService.editProduct(productDto));
         model.addAttribute("categories", categoryService.getAll());
         return "backend/product/edit";

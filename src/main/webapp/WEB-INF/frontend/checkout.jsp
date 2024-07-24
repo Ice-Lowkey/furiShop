@@ -133,7 +133,7 @@
                     <div class="form-group row">
                         <div class="col-md-12">
                             <label for="c_address" class="text-black">Address <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="c_address" name="address" placeholder="Street address">
+                            <input type="text" class="form-control" id="c_address" name="address" placeholder="Street address" required>
                         </div>
                     </div>
 
@@ -144,22 +144,22 @@
                     <div class="form-group row">
                         <div class="col-md-6">
                             <label for="c_state_country" class="text-black">State / Country <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="c_state_country" name="state">
+                            <input type="text" class="form-control" id="c_state_country" name="state" required>
                         </div>
                         <div class="col-md-6">
                             <label for="c_postal_zip" class="text-black">Posta / Zip <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="c_postal_zip" name="posta">
+                            <input type="text" class="form-control" id="c_postal_zip" name="posta" required>
                         </div>
                     </div>
 
                     <div class="form-group row mb-5">
                         <div class="col-md-6">
                             <label for="c_email_address" class="text-black">Email Address <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="c_email_address" name="email">
+                            <input type="text" class="form-control" id="c_email_address" name="email" required>
                         </div>
                         <div class="col-md-6">
                             <label for="c_phone" class="text-black">Phone <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="c_phone" name="phone" placeholder="Phone Number">
+                            <input type="text" class="form-control" id="c_phone" name="phone" placeholder="Phone Number" required>
                         </div>
                     </div>
 
@@ -465,6 +465,32 @@
         var totalValue = totalElement.innerText.replace('$', '');
         document.getElementById('hiddenTotal').value = totalValue;
     }
+</script>
+
+<script>
+    document.querySelector('form').addEventListener('submit', function (event) {
+        const phone = document.getElementById('c_diff_phone')
+        const phonecnt = phone.value;
+
+        if (!phonecnt.length <= 8) {
+            alert('Số điện thoại không hợp lệ')
+            event.preventDefault();
+        }
+    })
+
+    document.querySelector('form').addEventListener('submit', function(event) {
+        const email = document.getElementById('c_diff_email_address');
+        const emailValue = email.value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //email phải có dạng như này
+
+        if (!emailRegex.test(emailValue)) {
+            alert('Email không hợp lệ');
+            event.preventDefault(); // Ngăn không cho form gửi đi
+        } else if (!emailValue.endsWith('@gmail.com')) { //kết thức email là @ gmail.com
+            alert('Email của bạn không hợp lệ');
+            event.preventDefault(); // Ngăn không cho form gửi đi
+        }
+    });
 </script>
 </body>
 

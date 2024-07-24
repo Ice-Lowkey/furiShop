@@ -279,7 +279,7 @@
             const price = parseFloat(priceElements[index].textContent.replace('$', ''));
             const total = price * quantity;
             totalProductElements[index].textContent = '$' + total.toFixed(2);
-            updateTotalCart(); // Gọi hàm cập nhật tổng số tiền giỏ hàng
+            updateTotalCart();
         }
 
         function updateTotalCart() {
