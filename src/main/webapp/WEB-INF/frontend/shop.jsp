@@ -29,7 +29,7 @@
 
     <style>
         #searchInput {
-            margin-left: 1250px;
+            margin-left: 90px;
             margin-top: 30px;
         }
     </style>
@@ -86,7 +86,9 @@
                 </div>
             </div>
             <div class="col-lg-7">
-
+                <div class="hero-img-wrap">
+                    <img src="/frontend/images/home/couch.png" class="img-fluid">
+                </div>
             </div>
         </div>
     </div>
