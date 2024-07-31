@@ -118,15 +118,15 @@
                                 </tr>
                                 </tfoot>
                                 <tbody>
-                                <c:forEach items="${data}" var="user">
+                                <c:forEach items="${data}" var="product">
                                     <tr class="product-item">
-                                        <td class="product-title">${user.name}</td>
-                                        <td>${user.price}$</td>
-                                        <td>${user.brand}</td>
-                                        <td>${user.description}</td>
-                                        <td><img width="100px" src="/api/product-image/${user.image}"></td>
-                                        <td><a href="/backend/product/edit/${user.id}">Sửa</a>
-                                            <a href="/backend/product/delete/${user.id}"
+                                        <td class="product-title">${product.name}</td>
+                                        <td>${product.price}$</td>
+                                        <td>${product.brand}</td>
+                                        <td>${product.description}</td>
+                                        <td><img width="100px" src="/api/product-image/${product.image}"></td>
+                                        <td><a href="/backend/product/edit/${product.id}">Sửa</a>
+                                            <a href="/backend/product/delete/${product.id}"
                                                onclick="confirm('bạn có muốn xóa sản phẩm này không')">Xóa</a>
                                         </td>
                                     </tr>

@@ -78,13 +78,13 @@
                                 </tr>
                                 </tfoot>
                                 <tbody>
-                                    <c:forEach items="${data}" var="user">
+                                    <c:forEach items="${data}" var="product">
                                         <tr>
-                                            <td>${user.email}</td>
-                                            <td>${user.phone}</td>
-                                            <td>${user.role}</td>
-                                            <td><a href="/backend/user/edit/${user.id}">Sửa</a>
-                                                <a href="/backend/user/delete/${user.id}">Xóa</a></td>
+                                            <td>${product.email}</td>
+                                            <td>${product.phone}</td>
+                                            <td>${product.role}</td>
+                                            <td><a href="/backend/user/edit/${product.id}">Sửa</a>
+                                                <a href="/backend/user/delete/${product.id}">Xóa</a></td>
                                         </tr>
                                 </c:forEach>
                                 </tbody>

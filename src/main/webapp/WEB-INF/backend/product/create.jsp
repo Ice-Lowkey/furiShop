@@ -61,14 +61,14 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <label for="validationCustom02" class="form-label">Nhãn hiệu</label>
+                                <label for="validationCustom02" class="form-label">Loại sản phẩm</label>
                                 <input type="text" class="form-control" name="brand" id="validationCustom02" value="" required>
                                 <div class="valid-feedback">
                                     Vui lòng điền tên nhãn hiệu.
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <label for="validationCustomUsername" class="form-label">Giá</label>
+                                <label for="validationCustomUsername" class="form-label">Giá tiền</label>
                                 <div class="input-group has-validation">
                                     <input type="number" class="form-control" name="price" id="validationCustomUsername"
                                            aria-describedby="inputGroupPrepend" required>
@@ -95,7 +95,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <label for="fileUploadId" class="form-label">Tải file</label>
+                                <label for="fileUploadId" class="form-label">Ảnh minh họa</label>
                                 <input type="file" class="form-control" id="fileUploadId">
                                 <input type="text" name="image" hidden class="form-control" id="fileUploadName" required>
                                 <div class="invalid-feedback">

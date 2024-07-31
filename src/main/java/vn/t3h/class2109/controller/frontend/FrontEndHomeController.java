@@ -5,8 +5,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import vn.t3h.class2109.dto.MessageDto;
 import vn.t3h.class2109.dto.ProductDto;
 import vn.t3h.class2109.dto.ReceiptDto;
+import vn.t3h.class2109.entities.MessageEntity;
+import vn.t3h.class2109.service.MessageService;
 import vn.t3h.class2109.service.ProductService;
 import vn.t3h.class2109.service.ReceiptService;
 
@@ -22,15 +26,13 @@ public class FrontEndHomeController {
     @Autowired
     ReceiptService receiptService;
 
+    @Autowired
+    MessageService messageService;
+
     @RequestMapping(value = {"/", "home"})
     public String homePage(Model model){
         //1: Lấy từ db danh sách sản phẩm
         List<ProductDto> productDtos = new ArrayList<>();
-//        productDtos.add(new ProductDto("/frontend/images/home/product1.jpg", 56, "Easy Polo Black Edition"));
-//        productDtos.add(new ProductDto("/frontend/images/home/product2.jpg", 57, "Easy Polo White Edition"));
-//        productDtos.add(new ProductDto("/frontend/images/home/product3.jpg", 58, "Easy Polo Yellow Edition"));
-//        productDtos.add(new ProductDto("/frontend/images/home/product4.jpg", 59, "Easy Polo Green Edition"));
-//        productDtos.add(new ProductDto("/frontend/images/home/product5.jpg", 54, "Easy Polo Black Edition"));
         model.addAttribute("products", productDtos);
         return "frontend/home";
     }
@@ -65,7 +67,7 @@ public class FrontEndHomeController {
 
     @RequestMapping(value = {"/", "contact"})
     public String contactPage(Model model){
-        model.addAttribute("contact" ,"day la trang contact");
+        model.addAttribute("messages" , "contact");
         return "frontend/contact";
     }
 

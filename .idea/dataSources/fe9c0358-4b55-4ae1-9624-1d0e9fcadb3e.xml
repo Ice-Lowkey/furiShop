@@ -1089,12 +1089,13 @@ SELECT|sys.sys_config
     <column id="333" parent="303" name="mess">
       <Position>4</Position>
       <DataType>varchar(2000)|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <key id="334" parent="303" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>email</ColNames>
-      <Primary>1</Primary>
-    </key>
+    <column id="334" parent="303" name="time">
+      <Position>5</Position>
+      <DataType>time|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
     <column id="335" parent="304" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>

@@ -57,24 +57,6 @@ public class BackendProductController {
         return "backend/product/list";
     }
 
-
-//    // Submit tạo mới sản phẩm
-//    @RequestMapping(value = "save", method = RequestMethod.POST, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-//    // đánh dấu đường dẫn của web
-//    public String taoMoiSanPham(Model model, ProductDto productDto) throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException {
-//        // viết hàm lưu vào db
-//        boolean result = productService.saveProduct(productDto);
-//        if (result){
-//            if (productDto.getId() == null)
-//                model.addAttribute("message", "Tạo mới thành công!");
-//            else
-//                model.addAttribute("message", "Sửa thành công!");
-//        }
-//        else
-//            model.addAttribute("message", "Thao tác thất bại!");
-//        return "backend/product/list";// đọc text từ file jsp và render ra html
-//    }
-
     // Submit tạo mới sản phẩm
     @RequestMapping(value = "save", method = RequestMethod.POST, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
     // đánh dấu đường dẫn của web
