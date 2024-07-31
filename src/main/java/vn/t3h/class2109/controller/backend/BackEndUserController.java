@@ -10,9 +10,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import vn.t3h.class2109.dto.ProductDto;
 import vn.t3h.class2109.dto.UserDto;
 import vn.t3h.class2109.entities.UserEntity;
 import vn.t3h.class2109.paging.PagingAndSortOject;
@@ -21,7 +19,6 @@ import vn.t3h.class2109.service.UserService;
 import vn.t3h.class2109.utils.Constants;
 
 import javax.validation.Valid;
-import java.sql.Array;
 import java.sql.SQLException;
 import java.util.Arrays;
 

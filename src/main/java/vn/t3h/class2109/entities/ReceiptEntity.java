@@ -2,10 +2,8 @@ package vn.t3h.class2109.entities;
 
 
 import lombok.Data;
-import vn.t3h.class2109.controller.backend.BackendReceiptController;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 @Data
 @Entity

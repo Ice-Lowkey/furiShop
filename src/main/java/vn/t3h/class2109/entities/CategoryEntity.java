@@ -1,7 +1,6 @@
 package vn.t3h.class2109.entities;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 @Entity
 @Table(name = "category", schema = "sanphamnoithat", catalog = "")
