@@ -293,6 +293,23 @@
 <script src="/frontend/js/bootstrap.bundle.min.js"></script>
 <script src="/frontend/js/tiny-slider.js"></script>
 <script src="/frontend/js/custom.js"></script>
+
+<script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+        const email = document.getElementById('email');
+        const emailValue = email.value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //email phải có dạng như này
+
+        if (!emailRegex.test(emailValue)) {
+            alert('Email không hợp lệ');
+            event.preventDefault(); // Ngăn không cho form gửi đi
+        } else if (!emailValue.endsWith('@gmail.com')) { //kết thức email là @ gmail.com
+            alert('Email của bạn không hợp lệ');
+            event.preventDefault(); // Ngăn không cho form gửi đi
+        }
+    });
+</script>
 </body>
+
 
 </html>

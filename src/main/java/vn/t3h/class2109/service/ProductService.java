@@ -1,20 +1,13 @@
 package vn.t3h.class2109.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
-import vn.t3h.class2109.dto.KhachHangdto;
 import vn.t3h.class2109.dto.ProductDto;
-import vn.t3h.class2109.dto.TableDataDto;
 import vn.t3h.class2109.entities.ProductEntity;
-import vn.t3h.class2109.entities.UserEntity;
 import vn.t3h.class2109.paging.PagingAndSortOject;
 import vn.t3h.class2109.repositories.ProductRepository;
-import vn.t3h.class2109.utils.DbUtil;
 
 import javax.persistence.EntityNotFoundException;
-import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
